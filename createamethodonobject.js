@@ -39,3 +39,23 @@ let dog2 = {
   
   dog2.sayLegs();
 //--------------------------------------
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = ["Dorongo", 3];
+for (let prop in canary){
+  if (canary.hasOwnProperty(prop)){
+    ownProps.push(prop);
+  }
+}
+console.log(canary.numLegs);
+// Only change code below this line
+//--------------------------------------
+/* As propriedades no protótipo são compartilhadas entre 
+TODAS as instâncias do Bird. Veja como adicionar numLegs ao protótipo Bird:
+Bird.prototype.numLegs = 2;
+Agora todas as instâncias de 'Bird' terão a propriedade 'numLegs' por conta da prototipagem.*/
+//--------------------------------------
