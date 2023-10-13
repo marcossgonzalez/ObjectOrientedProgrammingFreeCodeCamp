@@ -10,10 +10,10 @@ function Bird() {
 }
 Esse construtor define 'Bird' como objeto e as palavras-chave 'this' como chaves para os valores em sequência;*/
 //--------------------------------------
-function Dog(){
-    this.name =  "Doggo";
-    this.color = "Brown";
-    this.numLegs = 4;
+function Dog() {
+  this.name = "Doggo";
+  this.color = "Brown";
+  this.numLegs = 4;
 }
 //--------------------------------------
 /* Para instanciar (ou fazer o Objeto ser alocado na memória) usamos a palavra-chave 'new'. Assim usamos o método construtor
@@ -28,18 +28,18 @@ function Bird() {
 let bluebird = (palavra-chave)->> new Bird();*/
 //--------------------------------------
 function Dog() {
-    this.name = "Rupert";
-    this.color = "brown";
-    this.numLegs = 4;
-  }
-  let hound = new Dog;
-  // Only change code below this line
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+let hound = new Dog();
+// Only change code below this line
 //--------------------------------------
 function Dog(name, color) {
-    this.name = name;
-    this.color = color;
-    this.numLegs = 4;
-  }
-  
-  let terrier = new Dog("Terrier", "Marrom");
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+
+let terrier = new Dog("Terrier", "Marrom");
 //--------------------------------------
