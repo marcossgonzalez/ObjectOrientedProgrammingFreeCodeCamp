@@ -59,3 +59,12 @@ TODAS as instâncias do Bird. Veja como adicionar numLegs ao protótipo Bird:
 Bird.prototype.numLegs = 2;
 Agora todas as instâncias de 'Bird' terão a propriedade 'numLegs' por conta da prototipagem.*/
 //--------------------------------------
+function Dog(name) {
+  this.name = name;
+}
+
+
+Dog.prototype.numLegs = 4;
+// Only change code above this line
+let beagle = new Dog("Snoopy");
+//--------------------------------------
