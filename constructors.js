@@ -43,3 +43,26 @@ function Dog(name, color) {
 
 let terrier = new Dog("Terrier", "Marrom");
 //--------------------------------------
+/*Sempre que uma função construtora cria um novo objeto, esse objeto é considerado uma instância de seu construtor. 
+JavaScript oferece uma maneira conveniente de verificar isso com o operador instanceof. 
+instanceof permite comparar um objeto a um construtor, retornando verdadeiro ou falso com base no fato de esse objeto 
+ter sido criado ou não com o construtor. Aqui está um exemplo: 
+
+let Bird = function(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 2;
+}
+
+let crow = new Bird("Alexis", "black");
+
+crow instanceof Bird;
+*/
+//--------------------------------------
+function House(numBedrooms) {
+    this.numBedrooms = numBedrooms;
+  }
+  let myHouse = new House(4);
+  myHouse instanceof House;
+  // Only change code below this line
+//--------------------------------------
