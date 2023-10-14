@@ -47,11 +47,11 @@ Bird.prototype = {
   }
 };*/
 //--------------------------------------
-function Dog(name) {
+function Dog3(name) {
     this.name = name;
   }
   
-  Dog.prototype = {
+  Dog3.prototype = {
     // Only change code below this line
     numLegs: 4,
     eat: function(){
@@ -61,7 +61,7 @@ function Dog(name) {
       console.log("My name is " + this.name);
     }
   };
-  let terrier = new Dog("Snoopy");
+  let terrier = new Dog3("Snoopy");
   terrier.describe();
 //--------------------------------------
 /*Sempre que um protótipo for definido manualmente para um novo objeto, 
@@ -77,13 +77,13 @@ Bird.prototype = {
   }
 };*/
 //--------------------------------------
-function Dog(name) {
+function Dog4(name) {
     this.name = name;
   }
   
   // Only change code below this line
-  Dog.prototype = {
-    constructor: Dog,
+  Dog4.prototype = {
+    constructor: Dog4,
     numLegs: 4,
     eat: function() {
       console.log("nom nom nom");
@@ -98,4 +98,13 @@ Por Exemplo:
 Dog.prototype.isPrototypeOf(beagle);
 Isso retornaria o valor booleano 'true';
 */
+//--------------------------------------
+function Dog5(name) {
+    this.name = name;
+  }
+  
+  let beagle2 = new Dog5("Snoopy");
+  
+  // Only change code below this line
+  Dog5.prototype.isPrototypeOf(beagle2);
 //--------------------------------------
