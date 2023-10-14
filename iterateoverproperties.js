@@ -64,3 +64,38 @@ function Dog(name) {
   let terrier = new Dog("Snoopy");
   terrier.describe();
 //--------------------------------------
+/*Sempre que um protótipo for definido manualmente para um novo objeto, 
+lembre-se de definir a propriedade do construtor:
+Bird.prototype = {
+  (propriedade construtor)->> constructor: Bird,
+  numLegs: 2,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name); 
+  }
+};*/
+//--------------------------------------
+function Dog(name) {
+    this.name = name;
+  }
+  
+  // Only change code below this line
+  Dog.prototype = {
+    constructor: Dog,
+    numLegs: 4,
+    eat: function() {
+      console.log("nom nom nom");
+    },
+    describe: function() {
+      console.log("My name is " + this.name);
+    }
+  };
+//--------------------------------------
+/*Você pode mostrar a herança das propriedades de construtor com o método isPrototypeOf('varaqui')
+Por Exemplo:
+Dog.prototype.isPrototypeOf(beagle);
+Isso retornaria o valor booleano 'true';
+*/
+//--------------------------------------
