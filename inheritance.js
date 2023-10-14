@@ -50,3 +50,38 @@ Animal.prototype = {
 let duck = Object.create(Animal.prototype); // Change this line
 let beagle = Object.create(Animal.prototype); // Change this line
 //------------------------------------------
+/*Podemos criar também 'subtypes' instanciando, tendo como parente um protótipo, um protótipo 'filho'.*/
+//------------------------------------------
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype);
+
+let beagle2 = new Dog();
+//------------------------------------------
+function Animal2() { }
+function Bird2() { }
+function Dog2() { }
+
+Bird2.prototype = Object.create(Animal2.prototype);
+Dog2.prototype = Object.create(Animal2.prototype);
+
+// Only change code below this line
+
+
+Bird2.prototype.constructor = Bird2;
+let duck2 = new Bird2();
+duck2.constructor;
+Dog2.prototype.constructor = Dog2;
+let beagle3 = new Dog2();
+beagle3.constructor;
+//------------------------------------------
