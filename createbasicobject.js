@@ -48,3 +48,31 @@ glideMixin(bird);
 
 console.log(bird.glide());
 //--------------------------------------
+/*A maneira mais simples de tornar esta propriedade pública privada é criando uma variável dentro da função construtora. 
+Isso altera o escopo dessa variável para estar dentro da função construtora em vez de disponível globalmente. 
+Dessa forma, a variável só pode ser acessada e alterada por métodos também dentro da função construtora.
+
+Por exemplo:
+function Bird() {
+  let hatchedEgg = 10;
+
+  this.getHatchedEggCount = function() { 
+    return hatchedEgg;
+  };
+}
+let ducky = new Bird();
+ducky.getHatchedEggCount();
+*/
+//--------------------------------------
+function Bird() {
+  let weight = 15;
+
+  this.getWeight = function(){
+    return weight;
+  };
+
+}
+
+let bird4 = new Bird();
+console.log(bird4.getWeight());
+//--------------------------------------
